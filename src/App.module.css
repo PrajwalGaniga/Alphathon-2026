@@ -1,0 +1,140 @@
+/* App.module.css */
+.container {
+  --bg-dark: #0a0a0c;
+  --neon-blue: #00f2ff;
+  --ayurveda-green: #4ade80; 
+  --accent-purple: #8b5cf6;  
+  --text-primary: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: var(--neon-blue);
+  text-shadow: 0 0 20px var(--neon-blue);
+  margin-bottom: 10px;
+}
+.container {
+  --primary: #2563eb; /* Professional Tech Blue */
+  --accent: #10b981;  /* Ayurveda Green */
+  --bg-main: #ffffff;
+  --text-dark: #111827;
+  --glass-border: rgba(0, 0, 0, 0.05);
+
+  background: var(--bg-main);
+  color: var(--text-dark);
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.heroTitle {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.9;
+  background: linear-gradient(135deg, #111, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Paper Cut Shadow */
+.paperCard {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 
+    20px 20px 60px #d1d1d1,
+    -20px -20px 60px #ffffff;
+  border: 1px solid var(--glass-border);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f8fafc; /* Or your base background color */
+}
+
+/* --- FLOATING MUSIC BUTTON --- */
+.musicBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  background: rgba(15, 23, 42, 0.8); /* Dark Slate / Avengers Dark */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.musicBtn:hover {
+  transform: scale(1.1);
+  background: #ef4444; /* Marvel Red on Hover */
+  border-color: #ef4444;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Active State (Glowing Pulse) */
+.playing {
+  background: #2563eb; /* Active Blue */
+  border-color: #2563eb;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+/* --- MINI SOUND WAVE ANIMATION --- */
+.soundWave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Optional: Mobile Adjustment */
+@media (max-width: 768px) {
+  .musicBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}

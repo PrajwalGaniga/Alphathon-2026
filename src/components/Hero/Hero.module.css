@@ -1,0 +1,262 @@
+.heroWrapper {
+  height: 100vh;
+  width: 100%;
+  background: #f8fafc; /* Clean Light Base */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* 1. NOISE TEXTURE (The "Film" Look) */
+.noise {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png'); /* Or any subtle noise png */
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* 2. BACKGROUND BLOBS (Ambient Lighting) */
+.bgGlows {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.glowBlue {
+  position: absolute;
+  top: -10%; left: -10%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.glowRed {
+  position: absolute;
+  bottom: -10%; right: -10%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* TOP BAR */
+.topBar {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.infoPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 1px;
+}
+
+/* TYPOGRAPHY - THE "ALPHA" */
+.titleContainer {
+  position: relative;
+  z-index: 1; /* Behind Spiderman */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.85;
+  margin-bottom: 20px;
+}
+
+.megaText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(5rem, 16vw, 18rem); /* MASSIVE RESPONSIVE TEXT */
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.05em;
+  margin: 0;
+  user-select: none;
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #cbd5e1; /* Outline effect */
+  position: relative;
+  z-index: 3; /* Just in case we want text over Spidey later, but usually Spidey is over this */
+}
+
+/* SPIDERMAN */
+.spideyWrapper {
+  position: absolute;
+  top: 0;
+  right: 5%; /* Offset to the right */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* In Front of text */
+  pointer-events: none;
+}
+
+.spiderman {
+  height: 90vh; /* Takes up most of screen */
+  object-fit: contain;
+  filter: drop-shadow(30px 30px 50px rgba(0, 0, 0, 0.25));
+  transform: rotate(5deg);
+}
+
+/* BOTTOM TEXT */
+.bottomContent {
+  position: relative;
+  z-index: 4;
+  margin-top: 20px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #64748b;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.highlight {
+  color: #ef4444;
+  font-weight: 800;
+}
+
+/* THE COMMAND DOCK (Floating Nav) */
+.dockWrapper {
+  position: absolute;
+  bottom: 40px;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.glassDock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px -5px rgba(0, 0, 0, 0.1), 
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transition: transform 0.3s;
+}
+
+.glassDock:hover {
+  transform: translateY(-5px);
+}
+
+.dockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 60px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background 0.2s, transform 0.2s;
+  gap: 4px;
+}
+
+.dockItem:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dockLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+  margin: 0 10px;
+}
+
+.registerBtn {
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.registerBtn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .megaText { font-size: 18vw; }
+  .spiderman { height: 50vh; top: auto; bottom: 15%; right: -20%; transform: rotate(0deg); }
+  .glassDock { 
+    width: 90%; 
+    justify-content: space-between; 
+    padding: 15px; 
+    bottom: 20px;
+  }
+  .dockItem { width: auto; height: auto; }
+  .dockLabel { display: none; } /* Hide labels on mobile to save space */
+  .registerBtn { padding: 10px 16px; font-size: 0.9rem; }
+  .verticalDivider { margin: 0 5px; }
+}

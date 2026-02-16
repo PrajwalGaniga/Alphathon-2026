@@ -1,0 +1,579 @@
+.wrapper {
+  background: #f8fafc; /* Clean White/Light Theme */
+  min-height: 100vh;
+  padding: 80px 5%;
+  font-family: 'Outfit', sans-serif;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.headerBox, .headerBoxAlpha {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tag {
+  background: #e0f2fe;
+  color: #0284c7;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.staggerTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #334155;
+}
+
+.alphaTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #b45309, #fbbf24, #b45309);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -2px;
+}
+
+.subText {
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* --- SECTION 1: POOL COLUMNS --- */
+.poolSplit {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.poolColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+.poolHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.cardStack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vsDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+}
+.line { width: 2px; height: 100px; background: #e2e8f0; }
+.vsText { font-weight: 900; font-size: 1.2rem; margin: 10px 0; }
+
+/* --- GLASSY FINALIST CARD --- */
+.glassCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 20px;
+  height: 100px; /* Fixed height to prevent shift */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.glassCard:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.teamLogo {
+  width: 60px; height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+
+.teamDetails h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.deptBadge {
+  font-size: 0.7rem;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.verifiedIcon {
+  margin-left: auto;
+  color: #22c55e;
+}
+
+/* --- LOCKED / SKELETON STATE --- */
+.lockedCard {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+}
+
+.lockedContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  filter: blur(4px); /* Blur the skeleton for effect */
+  opacity: 0.5;
+}
+
+.lockOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.4);
+  font-weight: 800;
+  color: #64748b;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  z-index: 10;
+}
+
+.skeleton { background: #e2e8f0; border-radius: 4px; }
+.skeletonLogo { width: 60px; height: 60px; border-radius: 12px; }
+.skeletonTextGroup { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.skeletonTitle { width: 60%; height: 16px; }
+.skeletonSub { width: 40%; height: 12px; }
+
+/* --- LOCKED PODIUM AREA --- */
+.lockedPodium {
+  background: #1e293b;
+  color: white;
+  border-radius: 20px;
+  padding: 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(34, 197, 94, 0.1) 4px,
+    rgba(34, 197, 94, 0.1) 6px
+  );
+  pointer-events: none;
+}
+
+.loadingBar {
+  width: 300px; height: 6px;
+  background: rgba(255,255,255,0.1);
+  margin: 30px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barFill { height: 100%; background: #22c55e; }
+
+/* --- FLIP CARDS --- */
+.podiumArena {
+  display: flex; flex-direction: column; align-items: center; gap: 40px;
+}
+.lowerTierRow { display: flex; gap: 20px; }
+
+.flipContainer {
+  width: 200px; height: 280px; perspective: 1000px; cursor: pointer;
+}
+
+.flipInner {
+  position: relative; width: 100%; height: 100%;
+  transition: transform 0.6s; transform-style: preserve-3d;
+}
+
+.flipFront, .flipBack {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden; border-radius: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.flipFront { background: #1e293b; color: white; border: 1px solid #334155; }
+.rankBig { font-size: 4rem; font-weight: 800; color: #334155; }
+.tapToReveal { font-size: 0.7rem; letter-spacing: 2px; color: #94a3b8; margin-top: 10px; }
+
+.flipBack { background: white; transform: rotateY(180deg); color: #1e293b; }
+.rankSmall { position: absolute; top: 15px; font-size: 0.7rem; font-weight: 800; color: #cbd5e1; }
+.backLogo { width: 70px; height: 70px; border-radius: 50%; margin-bottom: 10px; object-fit: cover; }
+.scoreBadge { background: #2563eb; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 700; margin-top: 10px; }
+
+.triggerBtn {
+  background: #2563eb; color: white; border: none; padding: 15px 40px;
+  border-radius: 30px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  transition: transform 0.2s;
+}
+.triggerBtn:hover { transform: scale(1.05); }
+
+/* --- SHOWDOWN --- */
+.overlay {
+  position: fixed; inset: 0; background: #0f172a; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.showdownContainer { display: flex; gap: 40px; align-items: flex-end; z-index: 20; }
+
+.finalCard {
+  width: 300px; height: 420px;
+  background: white; border-radius: 24px;
+  position: relative; overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: flex; flex-direction: column;
+}
+
+.gold { border: 4px solid #fbbf24; transform: scale(1.1); z-index: 10; }
+.silver { border: 4px solid #cbd5e1; }
+
+.medalBanner {
+  background: #f1f5f9; padding: 15px; text-align: center;
+  font-weight: 900; letter-spacing: 2px;
+}
+.gold .medalBanner { background: #fbbf24; color: #78350f; }
+.silver .medalBanner { background: #cbd5e1; color: #1e293b; }
+
+.finalBody, .mysteryBody {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center;
+}
+
+.winnerLogo { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fbbf24; margin-bottom: 20px; object-fit: cover; }
+.runnerLogo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px; object-fit: cover; }
+
+.finalName { font-size: 1.8rem; margin: 0; line-height: 1.1; }
+.finalScore { font-size: 3.5rem; font-weight: 900; font-family: 'Space Grotesk', sans-serif; color: #d97706; margin-top: auto; }
+
+.mysteryIcon { font-size: 4rem; color: #cbd5e1; margin-bottom: 20px; }
+.pulseIcon { animation: pulse 0.5s infinite; color: #ef4444; }
+.scrambleScore { font-size: 3rem; font-family: monospace; font-weight: 700; color: #64748b; }
+
+.revealBtn {
+  margin-top: 20px; padding: 12px 24px; background: #111827; color: white;
+  border: none; border-radius: 30px; font-weight: 800; cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.countdownNumber {
+  position: absolute; font-size: 20rem; font-weight: 900; color: #ef4444; z-index: 50;
+}
+
+.flash { position: absolute; inset: 0; background: white; z-index: 60; pointer-events: none; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+@media (max-width: 900px) {
+  .poolSplit { flex-direction: column; }
+  .showdownContainer { flex-direction: column-reverse; }
+  .finalCard { width: 280px; height: 380px; transform: none !important; }
+}
+/* ... Keep all existing styles ... */
+
+/* --- NEW: READY TEXT ANIMATION --- */
+.readyText {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+  z-index: 200;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Ensure the flash overlay is on top of everything */
+.flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Mobile Adjustment for Ready Text */
+@media (max-width: 768px) {
+  .readyText {
+    font-size: 2rem;
+    top: 15%;
+  }
+}
+/* ... Keep all existing styles ... */
+
+/* --- FIXED: READY TEXT ANIMATION --- */
+.readyText {
+  position: absolute;
+  top: 15%; /* Moved up slightly to clear cards */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+  z-index: 200;
+  
+  /* Prevent overflow */
+  width: 90%;
+  max-width: 800px;
+  line-height: 1.2;
+  word-wrap: break-word;
+  white-space: pre-wrap; /* Allows wrapping */
+}
+
+/* Ensure the flash overlay is on top of everything */
+.flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Mobile Adjustment for Ready Text */
+@media (max-width: 768px) {
+  .readyText {
+    font-size: 2rem;
+    top: 10%;
+    width: 95%;
+  }
+}
+/* --- BASE LAYOUT --- */
+.wrapper {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 80px 5%;
+  font-family: 'Outfit', sans-serif;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.headerBox, .headerBoxAlpha { text-align: center; margin-bottom: 60px; }
+
+.tag {
+  background: #e0f2fe; color: #0284c7;
+  font-weight: 700; font-size: 0.8rem; padding: 5px 12px;
+  border-radius: 20px; display: inline-block; margin-bottom: 15px;
+}
+
+.staggerTitle {
+  font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem;
+  font-weight: 700; letter-spacing: 2px; color: #334155;
+}
+
+.alphaTitle {
+  font-family: 'Space Grotesk', sans-serif; font-size: 4rem; font-weight: 900;
+  background: linear-gradient(to right, #b45309, #fbbf24, #b45309);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: -2px;
+}
+
+.subText { color: #64748b; margin-top: 10px; }
+
+/* --- POOL SECTION --- */
+.poolSplit { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.poolColumn { flex: 1; min-width: 300px; }
+.poolHeader { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #94a3b8; margin-bottom: 20px; letter-spacing: 1px; }
+.cardStack { display: flex; flex-direction: column; gap: 20px; }
+
+.vsDivider { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #cbd5e1; }
+.line { width: 2px; height: 100px; background: #e2e8f0; }
+.vsText { font-weight: 900; font-size: 1.2rem; margin: 10px 0; }
+
+/* --- CARDS --- */
+.glassCard {
+  background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05);
+  border-radius: 16px; padding: 20px; height: 100px;
+  display: flex; align-items: center; position: relative; overflow: hidden;
+  transition: transform 0.2s;
+}
+.glassCard:hover { transform: translateY(-3px); border-color: #cbd5e1; }
+.cardContent { display: flex; align-items: center; gap: 20px; width: 100%; }
+.teamLogo { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; background: #f1f5f9; }
+.teamDetails h4 { margin: 0; font-size: 1.1rem; color: #1e293b; }
+.deptBadge { font-size: 0.7rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; color: #64748b; font-weight: 700; }
+.verifiedIcon { margin-left: auto; color: #22c55e; }
+
+/* LOCKED STATE */
+.lockedCard { background: #f8fafc; border: 1px dashed #cbd5e1; }
+.lockedContent { display: flex; align-items: center; gap: 20px; width: 100%; filter: blur(4px); opacity: 0.5; }
+.lockOverlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,0.4); font-weight: 800; color: #64748b; z-index: 10; }
+.skeleton { background: #e2e8f0; border-radius: 4px; }
+.skeletonLogo { width: 60px; height: 60px; border-radius: 12px; }
+.skeletonTextGroup { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.skeletonTitle { width: 60%; height: 16px; }
+.skeletonSub { width: 40%; height: 12px; }
+
+/* --- PODIUM --- */
+.lockedPodium { background: #1e293b; color: white; border-radius: 20px; padding: 60px; text-align: center; position: relative; overflow: hidden; }
+.scanner { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(34, 197, 94, 0.1) 4px, rgba(34, 197, 94, 0.1) 6px); pointer-events: none; }
+
+.podiumArena { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.lowerTierRow { display: flex; gap: 20px; }
+.flipContainer { width: 200px; height: 280px; perspective: 1000px; cursor: pointer; }
+.flipInner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+.flipFront, .flipBack { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.flipFront { background: #1e293b; color: white; border: 1px solid #334155; }
+.rankBig { font-size: 4rem; font-weight: 800; color: #334155; }
+.tapToReveal { font-size: 0.7rem; letter-spacing: 2px; color: #94a3b8; margin-top: 10px; }
+.flipBack { background: white; transform: rotateY(180deg); color: #1e293b; }
+.backLogo { width: 70px; height: 70px; border-radius: 50%; margin-bottom: 10px; object-fit: cover; }
+.scoreBadge { background: #2563eb; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 700; margin-top: 10px; }
+.triggerBtn { background: #2563eb; color: white; border: none; padding: 15px 40px; border-radius: 30px; font-weight: 700; cursor: pointer; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); transition: transform 0.2s; }
+.triggerBtn:hover { transform: scale(1.05); }
+
+/* --- GRAND SHOWDOWN OVERLAY --- */
+.overlay {
+  position: fixed; inset: 0; z-index: 100;
+  /* Cinematic Spotlight Background */
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* New: Absolute center layer for Text/Countdown so it never misaligns */
+.centerStage {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; /* Let clicks pass through to buttons */
+  z-index: 50; /* Above cards */
+}
+
+/* The Cards Container */
+.showdownContainer {
+  display: flex; gap: 40px; align-items: flex-end; z-index: 20;
+}
+
+.finalCard {
+  width: 300px; height: 420px; background: white; border-radius: 24px;
+  position: relative; overflow: visible; /* changed from hidden to allow crown/glow */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: flex; flex-direction: column;
+}
+
+.gold { border: 4px solid #fbbf24; transform: scale(1.1); z-index: 10; }
+.silver { border: 4px solid #cbd5e1; }
+.winnerGlow { animation: winnerPulse 2s infinite ease-in-out; }
+
+.medalBanner { background: #f1f5f9; padding: 15px; text-align: center; font-weight: 900; letter-spacing: 2px; border-radius: 20px 20px 0 0; }
+.gold .medalBanner { background: #fbbf24; color: #78350f; }
+.silver .medalBanner { background: #cbd5e1; color: #1e293b; }
+
+.finalBody, .mysteryBody { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; }
+.winnerLogo { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fbbf24; margin-bottom: 20px; object-fit: cover; }
+.runnerLogo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px; object-fit: cover; }
+.finalName { font-size: 1.8rem; margin: 0; line-height: 1.1; }
+.finalScore { font-size: 3.5rem; font-weight: 900; font-family: 'Space Grotesk', sans-serif; color: #d97706; margin-top: auto; }
+
+.mysteryIcon { font-size: 4rem; color: #cbd5e1; margin-bottom: 20px; }
+.pulseIcon { animation: pulse 0.5s infinite; color: #ef4444; }
+.scrambleScore { font-size: 3rem; font-family: monospace; font-weight: 700; color: #64748b; }
+
+.revealBtn { margin-top: 20px; padding: 12px 24px; background: #111827; color: white; border: none; border-radius: 30px; font-weight: 800; cursor: pointer; pointer-events: auto; animation: bounce 2s infinite; }
+
+/* --- UPDATED TEXT ANIMATION --- */
+.readyText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5rem; /* Massive */
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+  max-width: 90%;
+  
+  /* Fire Gradient */
+  background: linear-gradient(to bottom, #fbbf24, #d97706, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Heavy Shadow for readability over cards */
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.8));
+  
+  text-transform: uppercase;
+}
+
+.countdownNumber {
+  font-size: 20rem; font-weight: 900; color: #ef4444;
+  text-shadow: 0 0 50px rgba(239, 68, 68, 0.8);
+}
+
+.flash { position: absolute; inset: 0; background: white; z-index: 200; pointer-events: none; }
+.crownContainer { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: center; z-index: 30; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes winnerPulse { 
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+  70% { box-shadow: 0 0 0 30px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+@media (max-width: 900px) {
+  .poolSplit { flex-direction: column; }
+  .showdownContainer { flex-direction: column-reverse; }
+  .finalCard { width: 280px; height: 380px; transform: none !important; }
+  .readyText { font-size: 3rem; }
+}

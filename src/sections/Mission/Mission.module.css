@@ -1,0 +1,517 @@
+.missionWrapper {
+  background: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.fixedBackground {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- THANOS SNAP LOGIC --- */
+.prologueWrapper {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 50px;
+}
+
+.thanosContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 50;
+}
+
+.snapInstruction {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ef4444;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  animation: pulse 2s infinite;
+}
+
+.gauntletBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+.gauntletImg {
+  width: 150px;
+  height: auto;
+}
+
+/* --- THE FLASH EFFECT --- */
+.whiteFlash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 0 100px 100px white; /* Extra glow */
+}
+
+/* --- PART 1: PROLOGUE STYLING --- */
+.prologueContainer {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.storyLine {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.storyBlock, .storyBlockRight {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+
+.storyBlockRight {
+  align-self: flex-end;
+  border-left: none;
+  border-right: 5px solid #ef4444;
+  text-align: right;
+}
+
+.chapterLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.storyBlock h2, .storyBlockRight h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.storyBlock p, .storyBlockRight p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.storyCenter {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.glitchTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1e293b;
+  letter-spacing: -2px;
+  position: relative;
+  display: inline-block;
+}
+
+.glitchSub {
+  color: #ef4444;
+  font-family: monospace;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  background: rgba(239, 68, 68, 0.1);
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+/* --- PART 2 & 3: NEW WORLD (Revealed Content) --- */
+.newWorldContent {
+  position: relative;
+  z-index: 20;
+}
+
+/* ... (Keep ThemeReveal, Diagnostics, and Hulk styles from previous CSS) ... */
+/* REUSE THE EXACT CSS FOR CARDS, HULK, AND REVEAL FROM PREVIOUS ITERATION BELOW */
+
+.revealContainer {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mandalaLayer {
+  position: absolute;
+  width: 800px; height: 800px;
+  border: 2px dashed rgba(251, 191, 36, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.revealContent { position: relative; z-index: 10; max-width: 1000px; }
+
+.themeTag { display: block; font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; font-weight: 700; }
+
+.themeTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1; font-weight: 800; margin-bottom: 40px;
+}
+
+.goldText { color: #fbbf24; text-shadow: 0 0 30px rgba(251, 191, 36, 0.5); }
+
+.sanskritBox { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 30px; display: inline-block; }
+.sanskritBox p { font-size: 1.5rem; margin-bottom: 5px; color: #cbd5e1; }
+.sanskritBox small { color: #94a3b8; font-style: italic; }
+
+.gridContainer { max-width: 1280px; margin: 100px auto; padding: 0 20px; position: relative; z-index: 5; }
+.gridHeader { text-align: center; margin-bottom: 60px; }
+.gridHeader h3 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; color: #1e293b; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+.card {
+  background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px;
+  position: relative; overflow: hidden; height: 280px; display: flex; flex-direction: column; transition: all 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+.cardActive { background: #f0fdf4; border-color: #22c55e; }
+
+.scanLine {
+  position: absolute; left: 0; width: 100%; height: 4px; background: #22c55e; opacity: 0.5; pointer-events: none; z-index: 10;
+}
+
+.cardHeader { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.errorCode { font-family: monospace; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; color: #64748b; }
+.iconDanger { color: #ef4444; background: #fee2e2; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+.iconSuccess { color: #22c55e; background: #dcfce7; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+.cardContent { flex: 1; }
+.errorContent h4 { color: #ef4444; font-size: 0.8rem; font-weight: 800; margin-bottom: 10px; }
+.patchContent h4 { color: #22c55e; font-size: 0.8rem; font-weight: 800; margin-bottom: 10px; }
+.patchContent h3 { color: #15803d; font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
+.statusFooter { border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px; font-size: 0.7rem; font-weight: 700; }
+.statusRed { color: #ef4444; }
+.statusGreen { color: #22c55e; }
+
+.hulkSection {
+  max-width: 1200px; margin: 0 auto; background: #1e293b; border-radius: 40px; padding: 60px; color: white;
+  position: relative; overflow: visible; margin-top: 100px;
+}
+.hulkContent { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.hulkText { flex: 1; z-index: 10; }
+.hulkText h2 { font-size: 1rem; color: #94a3b8; letter-spacing: 2px; margin-bottom: 10px; }
+.hulkText h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: 1; margin-bottom: 20px; }
+.hulkText p { color: #cbd5e1; line-height: 1.6; margin-bottom: 40px; }
+.downloadBtn {
+  background: #22c55e; color: #052e16; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 15px; padding: 15px 30px; border-radius: 20px; transition: transform 0.2s;
+}
+.downloadBtn:hover { transform: scale(1.05); background: #4ade80; }
+.btnMain { display: block; font-weight: 800; font-size: 1.1rem; }
+.btnSub { display: block; font-size: 0.8rem; opacity: 0.8; }
+.hulkVisual { flex: 1; display: flex; justify-content: center; position: relative; }
+.hulkImg { width: 120%; max-width: 500px; transform: scale(1.3) translateY(-10%); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+@media (max-width: 900px) {
+  .storyLine { gap: 40px; }
+  .hulkContent { flex-direction: column; text-align: center; }
+  .hulkImg { margin-top: -50px; margin-bottom: 20px; width: 100%; }
+  .glitchTitle { font-size: 2.5rem; }
+  .themeTitle { font-size: 2.5rem; }
+  .hulkText h1 { font-size: 3rem; }
+}
+.missionWrapper {
+  background: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.fixedBackground {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- THANOS SNAP LOGIC --- */
+.prologueWrapper {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 50px;
+}
+
+.thanosContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 50;
+}
+
+.snapInstruction {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ef4444;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  animation: pulse 2s infinite;
+}
+
+.gauntletBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+.gauntletImg {
+  width: 150px;
+  height: auto;
+}
+
+.gauntletBtn:hover {
+  transform: scale(1.05);
+}
+
+/* --- THE FLASH EFFECT --- */
+.whiteFlash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 0 100px 100px white; /* Extra glow */
+}
+
+/* --- PART 1: PROLOGUE STYLING --- */
+.prologueContainer {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.storyLine {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.storyBlock, .storyBlockRight {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+
+.storyBlockRight {
+  align-self: flex-end;
+  border-left: none;
+  border-right: 5px solid #ef4444;
+  text-align: right;
+}
+
+.chapterLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.storyBlock h2, .storyBlockRight h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.storyBlock p, .storyBlockRight p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.storyCenter {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.glitchTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1e293b;
+  letter-spacing: -2px;
+  position: relative;
+  display: inline-block;
+}
+
+.glitchSub {
+  color: #ef4444;
+  font-family: monospace;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  background: rgba(239, 68, 68, 0.1);
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+/* --- PART 2 & 3: NEW WORLD (Revealed Content) --- */
+.newWorldContent {
+  position: relative;
+  z-index: 20;
+}
+
+.revealContainer {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mandalaLayer {
+  position: absolute;
+  width: 800px; height: 800px;
+  border: 2px dashed rgba(251, 191, 36, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.revealContent { position: relative; z-index: 10; max-width: 1000px; }
+
+.themeTag { display: block; font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; font-weight: 700; }
+
+.themeTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1; font-weight: 800; margin-bottom: 40px;
+}
+
+.goldText { color: #fbbf24; text-shadow: 0 0 30px rgba(251, 191, 36, 0.5); }
+
+.sanskritBox { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 30px; display: inline-block; }
+.sanskritBox p { font-size: 1.5rem; margin-bottom: 5px; color: #cbd5e1; }
+.sanskritBox small { color: #94a3b8; font-style: italic; }
+
+.gridContainer { max-width: 1280px; margin: 100px auto; padding: 0 20px; position: relative; z-index: 5; }
+.gridHeader { text-align: center; margin-bottom: 60px; }
+.gridHeader h3 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; color: #1e293b; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+.card {
+  background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px;
+  position: relative; overflow: hidden; height: 280px; display: flex; flex-direction: column; transition: all 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+.cardActive { background: #f0fdf4; border-color: #22c55e; }
+
+.scanLine {
+  position: absolute; left: 0; width: 100%; height: 4px; background: #22c55e; opacity: 0.5; pointer-events: none; z-index: 10;
+}
+
+.cardHeader { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.errorCode { font-family: monospace; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; color: #64748b; }
+.iconDanger { color: #ef4444; background: #fee2e2; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+.iconSuccess { color: #22c55e; background: #dcfce7; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+.cardContent { flex: 1; }
+.errorContent h4 { color: #ef4444; font-size: 0.8rem; font-weight: 800; margin-bottom: 10px; }
+.patchContent h4 { color: #22c55e; font-size: 0.8rem; font-weight: 800; margin-bottom: 10px; }
+.patchContent h3 { color: #15803d; font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
+.statusFooter { border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px; font-size: 0.7rem; font-weight: 700; }
+.statusRed { color: #ef4444; }
+.statusGreen { color: #22c55e; }
+
+.hulkSection {
+  max-width: 1200px; margin: 0 auto; background: #1e293b; border-radius: 40px; padding: 60px; color: white;
+  position: relative; overflow: visible; margin-top: 100px;
+}
+.hulkContent { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.hulkText { flex: 1; z-index: 10; }
+.hulkText h2 { font-size: 1rem; color: #94a3b8; letter-spacing: 2px; margin-bottom: 10px; }
+.hulkText h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: 1; margin-bottom: 20px; }
+.hulkText p { color: #cbd5e1; line-height: 1.6; margin-bottom: 40px; }
+.downloadBtn {
+  background: #22c55e; color: #052e16; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 15px; padding: 15px 30px; border-radius: 20px; transition: transform 0.2s;
+}
+.downloadBtn:hover { transform: scale(1.05); background: #4ade80; }
+.btnMain { display: block; font-weight: 800; font-size: 1.1rem; }
+.btnSub { display: block; font-size: 0.8rem; opacity: 0.8; }
+.hulkVisual { flex: 1; display: flex; justify-content: center; position: relative; }
+.hulkImg { width: 120%; max-width: 500px; transform: scale(1.3) translateY(-10%); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+@media (max-width: 900px) {
+  .storyLine { gap: 40px; }
+  .hulkContent { flex-direction: column; text-align: center; }
+  .hulkImg { margin-top: -50px; margin-bottom: 20px; width: 100%; }
+  .glitchTitle { font-size: 2.5rem; }
+  .themeTitle { font-size: 2.5rem; }
+  .hulkText h1 { font-size: 3rem; }
+}

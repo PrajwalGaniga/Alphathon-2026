@@ -1,0 +1,264 @@
+.poolWrapper {
+  min-height: 100vh;
+  padding: 100px 5%;
+  background: #f8fafc; /* Light Theme Background */
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- HEADER --- */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tag {
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* --- LOCKED STATE (IRON MAN FLYING) --- */
+.lockedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  position: relative;
+}
+
+.lockedContent {
+  text-align: center;
+  z-index: 2;
+  margin-top: -50px; /* Pull text up slightly */
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  border: 1px solid #fecaca;
+}
+
+.lockedContent h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.lockedContent p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Loader Bar */
+.loaderBar {
+  width: 300px;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.loaderFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border-radius: 10px;
+}
+
+/* Iron Man Image */
+.ironManFlying {
+  height: 60vh;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+  margin-top: 20px;
+  z-index: 1;
+}
+
+/* --- REVEALED STATE (CIVIL WAR) --- */
+.warContainer {
+  width: 100%;
+}
+
+.warHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.warImage {
+  max-width: 100%;
+  height: 300px; /* Constrain height */
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+  margin-bottom: 20px;
+}
+
+.warHeader h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: #475569;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* Toggles */
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #f1f5f9;
+}
+
+.activeBtn {
+  background: #2563eb; /* Cap Blue */
+  color: white;
+  border: 1px solid #2563eb;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+  transform: scale(1.05);
+}
+
+.activeBtnB {
+  background: #dc2626; /* Tony Red */
+  color: white;
+  border: 1px solid #dc2626;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px -5px rgba(220, 38, 38, 0.4);
+  transform: scale(1.05);
+}
+
+/* Team Grid */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.teamLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.cardHeader h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.deptTag {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.membersList {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.memberLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 5px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .lockedContent h1 { font-size: 1.8rem; }
+  .ironManFlying { height: 40vh; }
+  .toggleContainer { flex-direction: column; width: 100%; }
+  .btn, .activeBtn, .activeBtnB { width: 100%; }
+}
