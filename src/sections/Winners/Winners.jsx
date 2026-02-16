@@ -19,8 +19,8 @@ const playSound = (type) => {
 
 const Winners = () => {
   // --- CONTROLS ---
-  const REVEAL_TOP_4 = true;       
-  const REVEAL_PODIUM = true;      
+  const REVEAL_TOP_4 = false;       
+  const REVEAL_PODIUM = false;      
 
   // --- STATE ---
   const [podiumStep, setPodiumStep] = useState(0); 

@@ -6,7 +6,7 @@ import styles from './Pools.module.css';
 const Pools = () => {
   // --- CONTROL VARIABLE ---
   // Set this to TRUE after 12:00 PM to reveal the pools
-  const POOLS_ANNOUNCED = true; 
+  const POOLS_ANNOUNCED = false; 
 
   const [activePool, setActivePool] = useState('A');
 

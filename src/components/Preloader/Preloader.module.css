@@ -1,0 +1,68 @@
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;        /* Fallback for older browsers */
+  height: 100dvh;       /* Dynamic Viewport Height: Fits mobile perfectly ignoring URL bars */
+  background-color: #000000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cinematicVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Ensures video fills screen without stretching/distorting */
+  object-position: center; /* Keeps the main action/text centered */
+  display: block;
+}
+
+/* Premium Glassmorphic Button */
+.skipBtn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: 'Space Grotesk', monospace; /* Or your main font */
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+}
+
+.skipBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* --- MOBILE OPTIMIZATIONS --- */
+@media (max-width: 768px) {
+  .skipBtn {
+    bottom: 30px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%); /* Center button on phone screens */
+    width: max-content;
+    padding: 10px 24px;
+    font-size: 0.75rem;
+    background: rgba(0, 0, 0, 0.4); /* Darker bg for better contrast on mobile */
+  }
+  
+  .skipBtn:hover {
+    transform: translateX(-50%) translateY(-2px); /* Maintain centering on hover */
+  }
+}
