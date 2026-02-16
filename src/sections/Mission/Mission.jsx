@@ -182,37 +182,37 @@ const DiagnosticsGrid = () => {
   const diagnostics = [
     {
       id: 1,
-      error: "STATIC_DIAGNOSTICS",
-      problem: "Apps only check birth nature (Prakriti) but fail to detect current stress (Vikriti).",
-      patch: "REAL-TIME IMBALANCE DETECTION",
+      error: "STATIC DIAGNOSTICS",
+      problem: "Most health apps just ask your birth date to guess your body type. They ignore that stress, food, and weather change your health daily.",
+      patch: "REAL-TIME IMBALANCE CHECKER",
       icon: <Activity />
     },
     {
       id: 2,
-      error: "FATAL_INTERACTION",
-      problem: "Mixing Ashwagandha with modern meds blindly? That's a safety blindspot.",
-      patch: "AI DRUG-HERB INTERACTION CHECKER",
+      error: "FATAL INTERACTION",
+      problem: "Mixing herbal supplements with modern pills isn't always safe. For example, taking Ashwagandha with sedatives can be dangerous.",
+      patch: "AUTOMATIC SAFETY SCANNER",
       icon: <ShieldAlert />
     },
     {
       id: 3,
-      error: "SEASONAL_SYNC_FAIL",
-      problem: "Eating ice cream in winter? Ignoring Ritucharya crushes immunity.",
-      patch: "DYNAMIC SEASONAL SYNC",
+      error: "SEASONAL DISCONNECT",
+      problem: "Our bodies change with the weather, but we eat the same food all year. Eating ice cream in winter confuses your system and hurts immunity.",
+      patch: "DYNAMIC SEASONAL GUIDE",
       icon: <ThermometerSun />
     },
     {
       id: 4,
-      error: "TRUST_DEFICIT",
-      problem: "Is that oil fake? Consumers have no way to verify authenticity.",
-      patch: "BLOCKCHAIN / VERIFIED SOURCE",
+      error: "THE TRUST DEFICIT",
+      problem: "It's hard to tell if an Ayurvedic oil is real or just scented chemicals. Users have no way to verify the quality or source of what they buy.",
+      patch: "PRODUCT PURITY VERIFIER",
       icon: <CheckCircle />
     },
     {
       id: 5,
-      error: "MIND_ALGO_ERROR",
-      problem: "Generic meditation makes 'Kapha' lazy and 'Vata' anxious.",
-      patch: "DOSHA-SPECIFIC MIND THERAPY",
+      error: "MENTAL MISMATCH",
+      problem: "Generic meditation apps give the same advice to everyone. But a hyperactive person needs calming, while a lazy person needs energy.",
+      patch: "PERSONALIZED MIND THERAPY",
       icon: <Brain />
     }
   ];
