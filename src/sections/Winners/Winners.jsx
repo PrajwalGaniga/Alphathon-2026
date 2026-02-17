@@ -19,7 +19,7 @@ const playSound = (type) => {
 
 const Winners = () => {
   // --- CONTROLS ---
-  const REVEAL_TOP_4 = false;       
+  const REVEAL_TOP_4 = true;       
   const REVEAL_PODIUM = false;      
 
   // --- STATE ---
@@ -37,12 +37,36 @@ const Winners = () => {
   // --- DATA ---
   const finalists = {
     poolA: [
-      { id: 1, name: "Team Stark", logo: "/team-logo/luffy.jpg", members: "Tony, Jarvis", dept: "AIML" },
-      { id: 2, name: "Web Slingers", logo: "/team-logo/spidey.jpg", members: "Peter, Ned", dept: "CSE" }
+      { 
+        id: 6, 
+        name: "Vibe Coders", 
+        dept: "ISE", 
+        members: ["Nishan", "Shriharsha", "Rohit", "Mukta Ramadas Bhat"], 
+        logo: "/team-logo/vibeCoder.jpeg" 
+      },
+      { 
+        id: 8, 
+        name: "DHAMAKA", 
+        dept: "CSE", 
+        members: ["Abhishek Shrivastav", "Manish G Suvarna", "Dhanya M Kotian", "KJ Harshini"], 
+        logo: "/team-logo/DHARA.png" 
+      },
     ],
     poolB: [
-      { id: 3, name: "Wakanda Forever", logo: "/team-logo/wakanda.jpg", members: "Shuri, Okoye", dept: "ECE" },
-      { id: 4, name: "Gamma Rays", logo: "/team-logo/hulk.jpg", members: "Bruce, Jen", dept: "EEE" }
+      { 
+        id: 1, 
+        name: "Apex team", 
+        dept: "CSE", 
+        members: ["Kushil bangera", "Mazum", "Tejas", "Pramod"], 
+        logo: "/team-logo/apex.jpeg" 
+      },
+            { 
+        id: 5, 
+        name: "Sloutions", 
+        dept: "AIDS", 
+        members: ["M.Prajwal", "K Mohammed Mudassir", "Hithesh", "Dhyan"], 
+        logo: "/team-logo/sloution.jpeg" 
+      },
     ]
   };
 
