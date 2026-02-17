@@ -6,7 +6,7 @@ import styles from './Pools.module.css';
 const Pools = () => {
   // --- CONTROL VARIABLE ---
   // Set this to TRUE after 12:00 PM to reveal the pools
-  const POOLS_ANNOUNCED = false; 
+  const POOLS_ANNOUNCED = true; 
 
   const [activePool, setActivePool] = useState('A');
 
@@ -20,34 +20,53 @@ const Pools = () => {
         name: "Apex team", 
         dept: "CSE", 
         members: ["Kushil bangera", "Mazum", "Tejas", "Pramod"], 
-        logo: "" 
+        logo: "/team-logo/apex.jpeg" 
       },
-      { 
-        id: 2, 
-        name: "CodeZilla", 
-        dept: "CSD", 
-        members: ["Shrinidhi Anchan", "Shishir R Kulal", "Ajay U Bangera", "C Jeevesh"], 
-        logo: "" 
-      },
+      
       { 
         id: 3, 
         name: "Code Crushers", 
         dept: "CSD", 
         members: ["SHRAVYA", "Jaswin", "Jothsna", "Poorvitha"], 
-        logo: "" 
+        logo: "team-logo/codeCrush.jpeg" 
       },
       { 
         id: 4, 
         name: "ByteCoders", 
         dept: "CSD", 
         members: ["Sharanya", "Spoorthi", "Sharanya M", "Rakshitha k"], 
-        logo: "" 
+        logo: "/team-logo/ByteCoder.jpeg" 
       },
       { 
         id: 5, 
         name: "Sloutions", 
         dept: "AIDS", 
         members: ["M.Prajwal", "K Mohammed Mudassir", "Hithesh", "Dhyan"], 
+        logo: "/team-logo/sloution.jpeg" 
+      },
+      { 
+        id: 11, 
+        name: "Herolt - Spark", 
+        dept: "CSE", 
+        members: ["Pavithra", "Chithra","K M Khadar Shiyam", "Kaup Mohammad Afreed"], 
+        logo: "team-logo/herolt.jpeg" 
+      },
+      { 
+        id: 12, 
+        name: "Blinders", 
+        dept: "CSD", 
+        members: ["Srujan S S", "Sachin Gaonkar", "Naman S", "Shashank"], 
+        logo: "/team-logo/blinders.jpeg" 
+      },
+      
+      
+    ],
+    B: [
+      { 
+        id: 8, 
+        name: "Ashwagandha", 
+        dept: "CSD & ISE", 
+        members: ["Vinayak", "Mari Sidhappa"], 
         logo: "" 
       },
       { 
@@ -55,52 +74,37 @@ const Pools = () => {
         name: "Vibe Coders", 
         dept: "ISE", 
         members: ["Nishan", "Shriharsha", "Rohit", "Mukta Ramadas Bhat"], 
-        logo: "" 
+        logo: "/team-logo/vibeCoder.jpeg" 
       },
-      { 
-        id: 7, 
-        name: "Team Herolt", 
-        dept: "CSE", 
-        members: ["K M Khadar Shiyam", "Kaup Mohammad Afreed"], 
-        logo: "" 
-      }
-    ],
-    B: [
       { 
         id: 8, 
         name: "DHAMAKA", 
         dept: "CSE", 
         members: ["Abhishek Shrivastav", "Manish G Suvarna", "Dhanya M Kotian", "KJ Harshini"], 
-        logo: "" 
+        logo: "/team-logo/DHARA.png" 
       },
       { 
         id: 9, 
         name: "CODECRAZE", 
         dept: "ISE", 
         members: ["Varshini", "BS Rakshita", "Harshini PK", "Swathi"], 
-        logo: "" 
+        logo: "/team-logo/codeCraze.jpeg" 
       },
       { 
         id: 10, 
         name: "Tech tirans", 
         dept: "ISE", 
         members: ["Arpitha", "Krithi", "Muktha"], 
-        logo: "" 
+        logo: "/team-logo/tech.jpeg" 
       },
       { 
-        id: 11, 
-        name: "Spark", 
-        dept: "CSE", 
-        members: ["Pavithra", "Chithra"], 
-        logo: "" 
-      },
-      { 
-        id: 12, 
-        name: "Blinders", 
+        id: 2, 
+        name: "CodeZilla", 
         dept: "CSD", 
-        members: ["Srujan S S", "Sachin Gaonkar", "Naman S", "Shashank"], 
-        logo: "" 
+        members: ["Shrinidhi Anchan", "Shishir R Kulal", "Ajay U Bangera", "C Jeevesh"], 
+        logo: "/team-logo/codezilla.png" 
       },
+      
       { 
         id: 13, 
         name: "Apend unit", 
@@ -108,6 +112,8 @@ const Pools = () => {
         members: ["Deeksha", "Prathibha", "Nisha Bagal", "Deeksha"], 
         logo: "" 
       }
+      
+      
     ]
   };
 
