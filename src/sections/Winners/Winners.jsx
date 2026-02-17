@@ -38,22 +38,6 @@ const Winners = () => {
   const finalists = {
     poolA: [
       { 
-        id: 6, 
-        name: "Vibe Coders", 
-        dept: "ISE", 
-        members: ["Nishan", "Shriharsha", "Rohit", "Mukta Ramadas Bhat"], 
-        logo: "/team-logo/vibeCoder.jpeg" 
-      },
-      { 
-        id: 8, 
-        name: "DHAMAKA", 
-        dept: "CSE", 
-        members: ["Abhishek Shrivastav", "Manish G Suvarna", "Dhanya M Kotian", "KJ Harshini"], 
-        logo: "/team-logo/DHARA.png" 
-      },
-    ],
-    poolB: [
-      { 
         id: 1, 
         name: "Apex team", 
         dept: "CSE", 
@@ -66,6 +50,23 @@ const Winners = () => {
         dept: "AIDS", 
         members: ["M.Prajwal", "K Mohammed Mudassir", "Hithesh", "Dhyan"], 
         logo: "/team-logo/sloution.jpeg" 
+      },
+    ],
+    poolB: [
+      
+      { 
+        id: 6, 
+        name: "Vibe Coders", 
+        dept: "ISE", 
+        members: ["Nishan", "Shriharsha", "Rohit", "Mukta Ramadas Bhat"], 
+        logo: "/team-logo/vibeCoder.jpeg" 
+      },
+      { 
+        id: 8, 
+        name: "DHAMAKA", 
+        dept: "CSE", 
+        members: ["Abhishek Shrivastav", "Manish G Suvarna", "Dhanya M Kotian", "KJ Harshini"], 
+        logo: "/team-logo/DHARA.png" 
       },
     ]
   };
