@@ -58,7 +58,7 @@ const Timeline = () => {
     { title: "Team Structure", items: ["2-4 Members", "₹20 Entry Fee", "BYOD (Laptops + Chargers)"] },
     { title: "Code Policy", items: ["Fresh Code Only", "No Pre-built Templates", "Open Source Libs Allowed"] },
     { title: "Judging Criteria for Top 4", items: ["Innovation (30%)", "Functionality (30%)", "UI/UX (20%)", "Pitch (20%)"] },
-    { title: "Judging Criteria for Final's", items: ["Innovation (20%)", "Functionality (20%)", "UI/UX (20%)", "Pitch (20%),Market Viability (20%)"] }
+    { title: "Judging Criteria for Final's", items: ["Innovation (20%)", "Functionality (20%)", "UI/UX (20%)", "Pitch (20%)","Market Viability (20%)"] }
   ];
 
   return (

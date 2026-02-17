@@ -17,48 +17,97 @@ const Pools = () => {
     A: [
       { 
         id: 1, 
-        name: "Team Stark", 
-        dept: "AIML", 
-        members: ["Tony S.", "Jarvis", "Friday"], 
-        logo: "/team-logo/luffy.jpg" // Leave empty to use default
+        name: "Apex team", 
+        dept: "CSE", 
+        members: ["Kushil bangera", "Mazum", "Tejas", "Pramod"], 
+        logo: "" 
       },
       { 
         id: 2, 
-        name: "Web Slingers", 
-        dept: "CSE", 
-        members: ["Peter P.", "Ned", "MJ"], 
+        name: "CodeZilla", 
+        dept: "CSD", 
+        members: ["Shrinidhi Anchan", "Shishir R Kulal", "Ajay U Bangera", "C Jeevesh"], 
         logo: "" 
       },
       { 
         id: 3, 
-        name: "Asgardians", 
-        dept: "ISE", 
-        members: ["Thor", "Loki", "Heimdall"], 
+        name: "Code Crushers", 
+        dept: "CSD", 
+        members: ["SHRAVYA", "Jaswin", "Jothsna", "Poorvitha"], 
         logo: "" 
       },
-    ],
-    B: [
       { 
         id: 4, 
-        name: "Wakanda Forever", 
-        dept: "ECE", 
-        members: ["T'Challa", "Shuri", "Okoye"], 
+        name: "ByteCoders", 
+        dept: "CSD", 
+        members: ["Sharanya", "Spoorthi", "Sharanya M", "Rakshitha k"], 
         logo: "" 
       },
       { 
         id: 5, 
-        name: "Gamma Rays", 
-        dept: "EEE", 
-        members: ["Bruce B.", "She-Hulk"], 
+        name: "Sloutions", 
+        dept: "AIDS", 
+        members: ["M.Prajwal", "K Mohammed Mudassir", "Hithesh", "Dhyan"], 
         logo: "" 
       },
       { 
         id: 6, 
-        name: "Guardians", 
-        dept: "MECH", 
-        members: ["Quill", "Gamora", "Groot", "Rocket"], 
+        name: "Vibe Coders", 
+        dept: "ISE", 
+        members: ["Nishan", "Shriharsha", "Rohit", "Mukta Ramadas Bhat"], 
         logo: "" 
       },
+      { 
+        id: 7, 
+        name: "Team Herolt", 
+        dept: "CSE", 
+        members: ["K M Khadar Shiyam", "Kaup Mohammad Afreed"], 
+        logo: "" 
+      }
+    ],
+    B: [
+      { 
+        id: 8, 
+        name: "DHAMAKA", 
+        dept: "CSE", 
+        members: ["Abhishek Shrivastav", "Manish G Suvarna", "Dhanya M Kotian", "KJ Harshini"], 
+        logo: "" 
+      },
+      { 
+        id: 9, 
+        name: "CODECRAZE", 
+        dept: "ISE", 
+        members: ["Varshini", "BS Rakshita", "Harshini PK", "Swathi"], 
+        logo: "" 
+      },
+      { 
+        id: 10, 
+        name: "Tech tirans", 
+        dept: "ISE", 
+        members: ["Arpitha", "Krithi", "Muktha"], 
+        logo: "" 
+      },
+      { 
+        id: 11, 
+        name: "Spark", 
+        dept: "CSE", 
+        members: ["Pavithra", "Chithra"], 
+        logo: "" 
+      },
+      { 
+        id: 12, 
+        name: "Blinders", 
+        dept: "CSD", 
+        members: ["Srujan S S", "Sachin Gaonkar", "Naman S", "Shashank"], 
+        logo: "" 
+      },
+      { 
+        id: 13, 
+        name: "Apend unit", 
+        dept: "ISE", 
+        members: ["Deeksha", "Prathibha", "Nisha Bagal", "Deeksha"], 
+        logo: "" 
+      }
     ]
   };
 
