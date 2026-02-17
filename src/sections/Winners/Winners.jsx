@@ -20,7 +20,7 @@ const playSound = (type) => {
 const Winners = () => {
   // --- CONTROLS ---
   const REVEAL_TOP_4 = true;       
-  const REVEAL_PODIUM = false;      
+  const REVEAL_PODIUM = true;      
 
   // --- STATE ---
   const [podiumStep, setPodiumStep] = useState(0); 
@@ -72,10 +72,11 @@ const Winners = () => {
   };
 
   const winners = {
-    first: { name: "Team Stark", score: 98, logo: "/team-logo/luffy.jpg", members: "Tony, Jarvis, Friday", dept: "AIML" },
-    second: { name: "Wakanda Forever", score: 96, logo: "/team-logo/wakanda.jpg", members: "Shuri, Okoye, T'Challa", dept: "ECE" },
-    third: { name: "Web Slingers", score: 89, logo: "/team-logo/spidey.jpg", members: "Peter, Ned", dept: "CSE" },
-    fourth: { name: "Gamma Rays", score: 85, logo: "/team-logo/hulk.jpg", members: "Bruce, Jen", dept: "EEE" }
+    first : { name: "Sloutions", score: 89, logo: "/team-logo/spidey.jpg", members: "M.Prajwal,K Mohammed Mudassir, Hithesh, Dhyan", dept: "AIDS" },
+    
+    second: { name: "Vibe Coders", score: 96, logo: "/team-logo/vibeCoder.jpeg", members: "Nishan, Shriharsha, Rohit, Mukta Ramadas Bhat", dept: "ISE" },
+    third: { name: "DHAMAKA", score: 98, logo: "/team-logo/DHARA.png", members: "Abhishek Shrivastav, Manish G Suvarna,Dhanya M Kotian, KJ Harshini", dept: "CSE" },
+    fourth: { name: "Apex team", score: 85, logo: "/team-logo/apex.jpeg", members: "", dept: "SU" }
   };
 
   // --- LOGIC ---
